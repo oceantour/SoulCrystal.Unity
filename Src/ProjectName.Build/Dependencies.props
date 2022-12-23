@@ -1,0 +1,46 @@
+<Project>
+	<!-- Set the version number of the related link library -->
+	<Import Project="Dependencies.Unity.props" />
+
+	<!-- The version referencing these nuget packages is net6.0 -->
+	<PropertyGroup>
+		<NLogVersion>5.1.0</NLogVersion>
+		<NLogWebVersion>5.2</NLogWebVersion>
+		
+		<SpanJsonVersion>4.0.0</SpanJsonVersion>
+		<YesSqlVersion>3.3.0</YesSqlVersion>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageManagement Include="NLog" Version="$(NLogVersion)" />
+		<PackageManagement Include="NLog.Schema" Version="$(NLogVersion)" />
+		<PackageManagement Include="NLog.WindowsEventLog" Version="$(NLogVersion)" />
+
+		<PackageManagement Include="NLog.Web" Version="$(NLogWebVersion)" />
+		<PackageManagement Include="NLog.Web.AspNetCore" Version="$(NLogWebVersion)" />
+		<PackageManagement Include="NLog.Extensions.Logging" Version="$(NLogWebVersion)" />
+		
+		<PackageManagement Include="NLog.Targets.Syslog" Version="7.0.0" />
+	</ItemGroup>
+	
+	<ItemGroup>
+		<PackageManagement Include="SpanJson" Version="$(SpanJsonVersion)" />
+		<PackageManagement Include="SpanJson.AspNetCore.Formatter" Version="$(SpanJsonVersion)" />
+
+		<PackageManagement Include="Newtonsoft.Json" Version="13.0.2" />
+	</ItemGroup>
+	
+	<ItemGroup>
+		<PackageManagement Include="YesSql" Version="$(YesSqlVersion)" />
+		<PackageManagement Include="YesSql.Abstractions" Version="$(YesSqlVersion)" />
+		<PackageManagement Include="YesSql.Core" Version="$(YesSqlVersion)" />
+
+		<PackageManagement Include="YesSql.Provider.SqlServer" Version="$(YesSqlVersion)" />
+		<PackageManagement Include="YesSql.Provider.Sqlite" Version="$(YesSqlVersion)" />
+		<PackageManagement Include="YesSql.Provider.MySql" Version="$(YesSqlVersion)" />
+		<PackageManagement Include="YesSql.Provider.PostgreSql" Version="$(YesSqlVersion)" />
+
+		<PackageManagement Include="YesSql.Filters.Abstractions" Version="$(YesSqlVersion)" />
+		<PackageManagement Include="YesSql.Filters.Query" Version="$(YesSqlVersion)" />
+	</ItemGroup>
+</Project>

@@ -1,0 +1,57 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33205.214
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Src", "Src", "{6820453A-5346-4F8F-9ABD-E90DDC7A8FE6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "App", "App", "{CAC86FD6-24F0-475E-A278-879BF34AEDD3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build", "Build", "{47EDF566-96A9-4556-BFB0-1E20DBF2B1BB}"
+	ProjectSection(SolutionItems) = preProject
+		.gitattributes = .gitattributes
+		.gitignore = .gitignore
+		Src\ProjectName.Build\Dependencies.props = Src\ProjectName.Build\Dependencies.props
+		Src\ProjectName.Build\Dependencies.Unity.props = Src\ProjectName.Build\Dependencies.Unity.props
+		Src\ProjectName.Build\ProjectName.Commons.props = Src\ProjectName.Build\ProjectName.Commons.props
+		Src\ProjectName.Build\ProjectName.Commons.targets = Src\ProjectName.Build\ProjectName.Commons.targets
+		Readme.md = Readme.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{B7A94EE0-B283-4A1D-8D2F-F0EEFC6CC723}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modules", "Modules", "{810130D7-CC59-4C9E-B6A1-FDF0CB84191E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{D24BDD67-5EFC-4C2C-A6F9-1C7A663781D8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "docs", "Src\docs\docs.csproj", "{3F1F723D-8739-42CD-8EA3-2D61DA8A5DC5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ProjectName.Core", "ProjectName.Core", "{4A3CCA12-6D60-4AB2-9FE6-00C4F9FECC1F}"
+	ProjectSection(SolutionItems) = preProject
+		Src\ProjectName\Directory.Build.props = Src\ProjectName\Directory.Build.props
+		Src\ProjectName\Directory.Build.targets = Src\ProjectName\Directory.Build.targets
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3F1F723D-8739-42CD-8EA3-2D61DA8A5DC5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F1F723D-8739-42CD-8EA3-2D61DA8A5DC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F1F723D-8739-42CD-8EA3-2D61DA8A5DC5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B7A94EE0-B283-4A1D-8D2F-F0EEFC6CC723} = {6820453A-5346-4F8F-9ABD-E90DDC7A8FE6}
+		{810130D7-CC59-4C9E-B6A1-FDF0CB84191E} = {6820453A-5346-4F8F-9ABD-E90DDC7A8FE6}
+		{3F1F723D-8739-42CD-8EA3-2D61DA8A5DC5} = {D24BDD67-5EFC-4C2C-A6F9-1C7A663781D8}
+		{4A3CCA12-6D60-4AB2-9FE6-00C4F9FECC1F} = {47EDF566-96A9-4556-BFB0-1E20DBF2B1BB}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6828F119-98CD-433F-BD5E-119F45285E1E}
+	EndGlobalSection
+EndGlobal

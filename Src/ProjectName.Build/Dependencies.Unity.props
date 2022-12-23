@@ -1,0 +1,41 @@
+<Project>
+	<!-- Set general labels for items -->
+	<PropertyGroup>
+		<SourceRoot>$(MSBuildThisFileDirectory)</SourceRoot>
+		<DefaultTargetFramework>net6.0</DefaultTargetFramework>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<!-- Set information about assembly generation -->
+		<TargetFramework>$(DefaultTargetFramework)</TargetFramework>
+		<ImplicitUsings>true</ImplicitUsings>
+		<Nullable>annotations</Nullable>
+		<SignAssembly>true</SignAssembly>
+		<AssemblyOriginatorKeyFile>$(SourceRoot)/StrongKey.snk</AssemblyOriginatorKeyFile>
+
+		<!-- Set information about generic compilation -->
+		<LangVersion>10.0</LangVersion>
+		<PlatformTarget>anycpu</PlatformTarget>
+		<Prefer32Bit>false</Prefer32Bit>
+		<TieredCompilation>true</TieredCompilation>
+		<TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+		<WarningsNotAsErrors>612,618</WarningsNotAsErrors>
+		<NoWarn>$(NoWarn);CS1591</NoWarn>
+		<AppDesignerFolder>Properties</AppDesignerFolder>
+		<GenerateDocumentationFile>true</GenerateDocumentationFile>
+	</PropertyGroup>
+
+	<!-- Set build information about DLL libraries -->
+	<Target Name="CopyReferenceDLL" AfterTargets="Build">
+		<PropertyGroup Condition="'$(Configuration)'=='Debug'">
+			<ReferenceDir>bin\Debug\$(DefaultTargetFramework)\*.dll</ReferenceDir>
+		</PropertyGroup>
+		<PropertyGroup Condition="'$(Configuration)'=='Release'">
+			<ReferenceDir>bin\Release\$(DefaultTargetFramework)\*.dll</ReferenceDir>
+		</PropertyGroup>
+		<ItemGroup>
+			<ReferenceDLL Include="$(ReferenceDir)"></ReferenceDLL>
+		</ItemGroup>
+		<Copy SourceFiles="@(ReferenceDLL)" DestinationFolder="..\..\..\Assets\Plugins" SkipUnchangedFiles="true"></Copy>
+	</Target>
+</Project>
